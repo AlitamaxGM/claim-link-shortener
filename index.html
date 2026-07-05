@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claim — shorten a link</title>
+<meta name="description" content="Turn a long link into a short claim ticket.">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="window-bar">
+  <div class="window-bar-inner">
+    <a class="brand" href="/"><span class="dot"></span>Claim</a>
+    <nav class="window-nav">
+      <a href="/" class="active">Shorten</a>
+      <a href="/links.html">My Links</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="hero-eyebrow">Link window — open 24/7</p>
+  <h1 class="hero-title">Hand over a long link.<br>Walk away with a <em>short one</em>.</h1>
+  <p class="hero-sub">Paste any URL below. You'll get a claim ticket with a short code — copy it, share it, and it'll always lead back to the original.</p>
+
+  <form id="shorten-form" class="window" autocomplete="off">
+    <p class="window-label">Paste your link</p>
+    <div class="slot-row">
+      <input type="url" id="url-input" name="url" placeholder="https://example.com/a/very/long/path" required>
+      <button type="submit" class="btn" id="submit-btn">Get ticket</button>
+    </div>
+    <p class="field-note" id="field-note">Optional: end your URL with anything — we don't touch the destination.</p>
+  </form>
+
+  <div class="stub-stage" id="stub-stage">
+    <div class="ticket">
+      <div class="ticket-main">
+        <p class="tk-label">Your short link</p>
+        <p class="tk-code" id="tk-code">—</p>
+        <p class="tk-original" id="tk-original">—</p>
+      </div>
+      <div class="ticket-stub">
+        <div class="tk-barcode" id="tk-barcode" aria-hidden="true"></div>
+        <button class="tk-copy-btn" id="tk-copy-btn">Copy</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">Claim · a small link shortener</footer>
+</main>
+
+<script src="/assets/app.js"></script>
+</body>
+</html>
