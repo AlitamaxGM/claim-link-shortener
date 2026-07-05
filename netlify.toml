@@ -1,0 +1,7 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Static files (index.html, links.html, /assets/*) are always served
+# before the catch-all /:code function, so this only fires for
+# unknown paths — exactly the short codes we generate.
